@@ -1,0 +1,13 @@
+{
+  "name": "faculty-evaluation-system",
+  "version": "1.0.0",
+  "scripts": {
+    "start:backend": "cd backend && node server.js",
+    "start:frontend": "cd frontend && npm start",
+    "both": "concurrently --kill-others-on-fail \"npm run start:backend\" \"npm run start:frontend\"",
+    "dev": "concurrently --kill-others-on-fail -n \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
